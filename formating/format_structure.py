@@ -1,5 +1,6 @@
 """
-    # usage: pdbfilepath A H,L Yes
+    # usage: pdbfilepath A H,L None
+    # usage: pdbfilepath A H,L path/out.pdb
 
 """
 import os,sys
@@ -13,7 +14,6 @@ def parse_pdb(pdbfile):
     
     header = [l for l in fullcontent if l.startswith('REMARK')]
     content = [l for l in fullcontent if l.startswith('ATOM')]
-    # content = [l for l in content if l.count('UNK') == 0] # remove UNKOWN residues
     return np.array(content)
 
 def chain_splitter(content,chains_AG,chains_AB):
@@ -91,7 +91,6 @@ if __name__ == '__main__':
     if output_path == 'None' or (not output_path.endswith('.pdb')):
         output_path = None
     
-    # usage: pdbfilepath A H,L Yes
 
     new_content = organizer(pdbfile,chains_AG,chains_AB,output_path)
     print(np.array(new_content))

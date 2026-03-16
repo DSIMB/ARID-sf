@@ -16,7 +16,9 @@ def create_cfg(ensemble_path,path_directory,ncores):
                         '',
                         '[topoaa]',
                         'tolerance = 99',
-                        'set_bfactor = false',]
+                        'set_bfactor = false',
+                        # you can add modules and parameters here
+                        ]
 
     
     return content
