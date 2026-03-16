@@ -27,6 +27,7 @@ path_dir = sys.argv[1]
 output_name = sys.argv[2]
 
 list_dir_paths = [os.path.join(path_dir,d) for d in os.listdir(path_dir)]
+print(list_dir_paths)
 list_dir_paths = [d for d in list_dir_paths if os.path.isdir(d)]
 
 
