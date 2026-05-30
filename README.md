@@ -93,9 +93,9 @@ If this is the case, you can run ARID-sf directly with HADDOCK3 models.
 
 ### OPLS UA Nomenclature
 
-Only polar hydrogens are present. Atom names and residue type names can be found in `/src/ARIDv2.0/lookup_dict.py`.
+Only polar hydrogens are present. Atom names and residue type names can be found in `./formatting/*lookup_dict.py`.
 
-An easy way to convert an antibody-antigen complex `.pdb` file to OPLS UA format is to use the HADDOCK3 `[topoaa]` module. An example script is available at `src/benchmark_sets/model_to_ua.py`.
+An easy way to convert an antibody-antigen complex `.pdb` file to OPLS UA format is to use the HADDOCK3 `[topoaa]` module. An example script is available at `./formatting/*model_to_ua.py`.
 
 ### Helper Formatting Scripts
 
@@ -139,3 +139,14 @@ To customize the computation, edit the following variables in `score_round.py`:
 | `CAP_MEMORY` | `1000` | Number of models processed before writing to disk (RAM-dependent) |
 
 ---
+
+## Reference
+ARID-sf: A physics-informed Deep Learning scoring function to improve Antibody-Antigen docking model ranking
+Ilyas Grandguillaume, Catherine Etchebest, Fernando Luis Barroso da Silva
+bioRxiv 2026.01.20.700530; doi: https://doi.org/10.64898/2026.01.20.700530
+
+---
+
+## Note
+
+A more accurate version of ARID-sf is out! Weights have been updated during the review process.
